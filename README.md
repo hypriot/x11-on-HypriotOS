@@ -1,5 +1,5 @@
 # x11-on-HypriotOS
-Instructions how to use X11 on a HypriotOS based Raspberry Pi system
+Instructions how to install X11 on a HypriotOS based Raspberry Pi system
 
 This repo contains some scripts and detailled instructions on how to install and use X11 windows manager on a HypriotOS based Raspberry Pi system
 
@@ -20,8 +20,22 @@ wget https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.s
 chmod +x install-x11-basics.sh
 ./install-x11-basics.sh
 ```
+Depending on your internet connection this installation proceder takes approx. 10 minutes only.
 
 Please reboot your system now to start X11 on your attached HDMI display.
 
+Disk usage for installing X11 and LightDM on a freshly flashed HypriotOS, here we've used a 8 GByte SD card:
+ - before installing
+```
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.9G  743M  5.9G  12% /
+```
+ - with X11 installed
+```
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.9G  1.1G  5.5G  17% /
+```
 
 Hypriot team, 2015
