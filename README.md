@@ -16,9 +16,7 @@ these details are based on blog post [Jessie on Raspberry PI 2 with Docker and C
 ## Installing X11 and LightDM on HypriotOS
 Running the installer script need sudo privileges for some elevated commands.
 ```
-wget https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh
-chmod +x install-x11-basics.sh
-./install-x11-basics.sh
+curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh | bash
 ```
 Depending on your internet connection this installation proceder takes approx. 10 minutes only.
 
