@@ -12,8 +12,8 @@ CONFIG_TXT_FILE=/boot/config.txt
 if [ ! -f ${CONFIG_TXT_FILE} ]; then
 
 cat << EOF | sudo tee ${CONFIG_TXT_FILE} >/dev/null
-#display_rotate=0	# normal HDMI displays
-display_rotate=2	# 7" Touch Screen display from RaspberryPi.Org
+display_rotate=0	# normal HDMI displays
+#display_rotate=2	# 7" Touch Screen display from RaspberryPi.Org
 EOF
 
 fi
