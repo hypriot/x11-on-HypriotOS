@@ -13,12 +13,12 @@ Credits:
 these details are based on blog post [Jessie on Raspberry PI 2 with Docker and Chromium](https://medium.com/@icebob/jessie-on-raspberry-pi-2-with-docker-and-chromium-c43b8d80e7e1) by user [icebob](https://medium.com/@icebob).
 
 
-## Installing X11 and LightDM on HypriotOS
+## 1. Installing X11 and LightDM on HypriotOS
 Running the installer script need sudo privileges for some elevated commands.
 ```
 curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh | bash
 ```
-Depending on your internet connection this installation proceder takes approx. 10 minutes only.
+Depending on your internet connection this installation procedure takes approx. 10 minutes only.
 
 Please reboot your system now to start X11 on your attached HDMI display.
 
@@ -35,5 +35,13 @@ $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       6.9G  1.1G  5.5G  17% /
 ```
+
+## 2. Installing Chromium web browser on HypriotOS/X11
+Running the installer script need sudo privileges for some elevated commands.
+```
+curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-chromium-browser.sh | bash
+```
+This takes approx. 15 minutes only.
+
 
 Hypriot team, 2015
