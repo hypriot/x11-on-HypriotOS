@@ -41,7 +41,7 @@ Running the installer script need sudo privileges for some elevated commands.
 ```
 curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-chromium-browser.sh | bash
 ```
-This takes approx. 15 minutes only.
+This takes approx. 5 minutes only.
 
 
 Hypriot team, 2015
