@@ -40,7 +40,7 @@ if [ ! -f ${LIGHTDM_CONF_FILE}.sav ]; then
 
 cat << EOF | sudo tee ${LIGHTDM_CONF_FILE} >/dev/null
 [SeatDefaults]
-autologin-user=pi
+autologin-user=pirate
 autologin-user-timeout=0
 EOF
 
