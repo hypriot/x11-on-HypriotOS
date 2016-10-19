@@ -88,7 +88,7 @@ echo "...done"
 # --------------------------------------------------------------------
 echo ""
 echo " STEP 4: install pre-compiled fbturbo"
-FBTURBO_TAR_URL=https://github.com/tniswong/x11-on-HypriotOS/raw/pi-3/fbturbo/${PI_VERSION}/fbturbo.tar.gz
+FBTURBO_TAR_URL=https://github.com/hypriot/x11-on-HypriotOS/raw/master/fbturbo/${PI_VERSION}/fbturbo.tar.gz
 FBTURBO_TAR_TMPFILE=/tmp/fbturbo.tar.gz
 curl -Lo ${FBTURBO_TAR_TMPFILE} ${FBTURBO_TAR_URL}
 echo "${PI_VERSION_FBTURBO_SHA256}  ${FBTURBO_TAR_TMPFILE}" | sha256sum -c
@@ -102,7 +102,7 @@ if [ "${PI_VERSION}" == "pi3" ]; then
 
     echo ""
     echo " STEP 5: update xorg.conf (pi3 only)"
-    XORG_CONF_URL=https://github.com/tniswong/x11-on-HypriotOS/raw/pi-3/fbturbo/${PI_VERSION}/xorg.conf
+    XORG_CONF_URL=https://github.com/hypriot/x11-on-HypriotOS/raw/master/fbturbo/${PI_VERSION}/xorg.conf
     XORG_CONF_TMPFILE=/tmp/xorg.conf
     curl -Lo ${XORG_CONF_TMPFILE} ${XORG_CONF_URL}
     echo "${PI3_XORG_CONF_SHA256}  ${XORG_CONF_TMPFILE}" | sha256sum -c

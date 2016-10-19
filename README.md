@@ -14,6 +14,9 @@ these details are based on blog post [Jessie on Raspberry PI 2 with Docker and C
 
 
 ## 1. Installing X11 and LightDM on HypriotOS
+
+### For RaspberryPi 2
+
 Running the installer script need sudo privileges for some elevated commands.
 ```
 curl -sSL https://github.com/hypriot/x11-on-HypriotOS/raw/master/install-x11-basics.sh | bash
@@ -34,6 +37,25 @@ Filesystem      Size  Used Avail Use% Mounted on
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/root       6.9G  1.1G  5.5G  17% /
+```
+
+### For RaspberryPi 3
+
+Running the installer script need sudo privileges for some elevated commands.
+```
+curl -Lso /tmp/install-x11-basics.sh -H "Cache-Control: no-cache" https://raw.githubusercontent.com/hypriot/x11-on-HypriotOS/master/install-x11-basics.sh && \
+chmod +x /tmp/install-x11-basics.sh && \
+/tmp/install-x11-basics.sh -pi3
+```
+Depending on your internet connection this installation procedure takes approx. 10 minutes only.
+
+Please reboot your system now to start X11 on your attached HDMI display.
+
+- with X11 installed (8 GByte SD Card)
+```
+$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       7.0G  950M  5.7G  15% /
 ```
 
 ## 2. Installing Chromium web browser on HypriotOS/X11
