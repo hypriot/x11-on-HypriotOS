@@ -32,7 +32,7 @@ echo "...done"
 
 # --------------------------------------------------------------------
 echo ""
-echo " STEP 3: enable LightDM autologin for user=pi"
+echo " STEP 3: enable LightDM autologin for user=pirate"
 LIGHTDM_CONF_FILE=/etc/lightdm/lightdm.conf
 if [ ! -f ${LIGHTDM_CONF_FILE}.sav ]; then
   # backup original file
