@@ -12,10 +12,10 @@ CHROMIUM_DEB_FILE2=chromium-browser_51.0.2704.106-0ubuntu0.15.04.1.1207_armhf.de
 echo ""
 echo " STEP 1: download Chromium .deb packages"
 if [ ! -f /tmp/${CHROMIUM_DEB_FILE1} ]; then
-  wget -O /tmp/${CHROMIUM_DEB_FILE1} ${CHROMIUM_BASEURL}/${CHROMIUM_DEB_FILE1}
+  curl -Lo /tmp/${CHROMIUM_DEB_FILE1} ${CHROMIUM_BASEURL}/${CHROMIUM_DEB_FILE1}
 fi
 if [ ! -f /tmp/${CHROMIUM_DEB_FILE2} ]; then
-  wget -O /tmp/${CHROMIUM_DEB_FILE2} ${CHROMIUM_BASEURL}/${CHROMIUM_DEB_FILE2}
+  curl -Lo /tmp/${CHROMIUM_DEB_FILE2} ${CHROMIUM_BASEURL}/${CHROMIUM_DEB_FILE2}
 fi
 echo "...done"
 
