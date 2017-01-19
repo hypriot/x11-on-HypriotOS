@@ -46,6 +46,7 @@ Running the installer script need sudo privileges for some elevated commands.
 curl -Lso /tmp/install-x11-basics.sh -H "Cache-Control: no-cache" https://raw.githubusercontent.com/hypriot/x11-on-HypriotOS/master/install-x11-basics.sh && \
 chmod +x /tmp/install-x11-basics.sh && \
 /tmp/install-x11-basics.sh -pi3
+/tmp/install-x11-basics.sh -pi3
 ```
 Depending on your internet connection this installation procedure takes approx. 10 minutes only.
 
@@ -67,3 +68,12 @@ This takes approx. 5 minutes only.
 
 
 Hypriot team, 2015
+
+## Re-Compiling fbturbo
+
+If you have fbturbo errors, you'll likely need get a fresh compile for your architecture. On your installation target, do the following:
+
+1. Follow the: [fbturbo Driver Installation](https://github.com/ssvb/xf86-video-fbturbo/wiki/Installation) guide
+1. Run the `fbturbo/fbturbo-create-tar.sh` script, on the same host you used to install fbturbo.
+1. Capture the SHA-256 Sum of the newly created `fbturbo.tar.gz`, and update the `install-x11-basics.sh` script.
+1. Verify that the `xorg.conf` hasn't changed, if it has, capture its SHA-256, and update `install-x11-basics.sh`
